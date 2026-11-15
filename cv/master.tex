@@ -1,0 +1,176 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+% MASTER CV - your base CV. Do not edit it for a specific
+% application; copy to cv/tailored/<Company>.tex and edit the copy.
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure generated PDF is machine readable and ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Jane Doe} \\ \vspace{1pt}
+    \small London, UK $|$ +44 7000 000000 $|$
+    \href{mailto:jane@example.com}{\underline{jane@example.com}} $|$
+    \href{https://linkedin.com/in/janedoe}{\underline{linkedin.com/in/janedoe}} $|$
+    \href{https://github.com/janedoe}{\underline{github.com/janedoe}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Example University}{London, UK}
+      {MSc Computer Science}{Sep 2023 -- Sep 2024}
+    \resumeSubheading
+      {Example University}{London, UK}
+      {BSc (Hons) Computer Science, First Class}{Sep 2020 -- Jul 2023}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{Oct 2024 -- Present}
+      {Example Corp}{London, UK}
+      \resumeItemListStart
+        \resumeItem{Built a Python/Django REST Framework backend and APIs serving a web app and mobile app, owning features end to end from requirements to production in a team of 5}
+        \resumeItem{Designed an event-driven AWS pipeline (SES, S3, Lambda) that turns inbound emails into structured records, replacing manual data entry for 200+ users}
+        \resumeItem{Cut average API response time by 40\% by profiling slow endpoints, adding database indexes and caching hot queries in Redis}
+        \resumeItem{Worked across the full development lifecycle in an agile team, including code reviews, CI/CD with GitHub Actions, automated pytest testing and production incident response}
+        \resumeItem{Integrated 6 third-party APIs (payments, mapping, address lookup) behind a common client with retries, rate limiting and structured logging}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineering Intern}{Jun 2023 -- Sep 2023}
+      {Sample Labs}{Manchester, UK}
+      \resumeItemListStart
+        \resumeItem{Developed a React dashboard for monitoring internal batch jobs, used daily by the operations team to spot and rerun failures}
+        \resumeItem{Wrote integration tests for a legacy billing service, raising coverage from 35\% to 70\% ahead of a database migration}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Teaching Assistant}{Sep 2021 -- Jun 2023}
+      {Example University}{London, UK}
+      \resumeItemListStart
+        \resumeItem{Ran weekly lab sessions for 60 first-year students on Python programming and data structures}
+        \resumeItem{Built an autograder for programming coursework that gave students instant feedback on test cases}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Example App} (MSc Dissertation) $|$ \emph{React Native, TypeScript, PostgreSQL}}{Jun 2024 -- Sep 2024}
+          \resumeItemListStart
+            \resumeItem{Built a mobile app for sharing local event listings, evaluated through user studies and the System Usability Scale (SUS)}
+            \resumeItem{Secured the backend with row-level security on every table and JWT-verified server functions, keeping API keys out of the client}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Example Hackathon Project} $|$ \emph{Python, NLP}}{\href{https://github.com/janedoe/example}{\underline{github.com/janedoe/example}}}
+          \resumeItemListStart
+            \resumeItem{Won a 48-hour university hackathon (1st of 15 teams) with a tool that summarises news articles and tracks topic sentiment over time}
+            \resumeItem{Designed and built the NLP pipeline in a team of 4, from prototype to final pitch}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, TypeScript, JavaScript, SQL (PostgreSQL), Java} \\
+     \textbf{Frameworks}{: Django, Django REST Framework, Flask, React, React Native} \\
+     \textbf{Cloud \& DevOps}{: AWS (S3, Lambda, SES), Docker, GitHub Actions, pytest, Git, Linux} \\
+     \textbf{Data}{: pandas, NumPy, Matplotlib, Redis}
+    }}
+ \end{itemize}
+
+\end{document}

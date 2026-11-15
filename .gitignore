@@ -1,0 +1,5 @@
+# LaTeX build output
+cv/build/
+
+# Obsidian app config
+.obsidian/
